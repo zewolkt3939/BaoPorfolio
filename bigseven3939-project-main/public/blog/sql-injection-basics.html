@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SQL Injection Basics | Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="../index.html">~/my-portfolio<span class="cursor">_</span></a>
+    <div class="nav-actions">
+      <button id="langToggle" class="btn-icon">EN</button>
+      <button id="themeToggle" class="btn-icon">☀</button>
+    </div>
+  </header>
+
+  <article class="post">
+    <p><a class="back-link" href="../index.html#blog">← Blog</a></p>
+
+    <!-- ===== Tiếng Việt ===== -->
+    <div class="lang-vi">
+      <h1>SQL Injection cơ bản cho người mới</h1>
+      <p class="meta">2026-05-20 · Web Security · SQLi</p>
+      <p><strong>SQL Injection (SQLi)</strong> là lỗ hổng cho phép kẻ tấn công chèn câu lệnh SQL độc hại vào input của ứng dụng, từ đó đọc/sửa dữ liệu trái phép trong cơ sở dữ liệu.</p>
+      <h2>1. Ví dụ kinh điển</h2>
+      <p>Giả sử ứng dụng xây dựng truy vấn bằng cách nối chuỗi:</p>
+      <pre>SELECT * FROM users
+WHERE username = '$user' AND password = '$pass';</pre>
+      <p>Nếu nhập <code>' OR '1'='1</code> vào ô mật khẩu, điều kiện luôn đúng và kẻ tấn công có thể đăng nhập mà không cần mật khẩu.</p>
+      <h2>2. Cách phòng chống</h2>
+      <ul>
+        <li>Dùng <strong>prepared statements / parameterized queries</strong>.</li>
+        <li>Validate và sanitize mọi input từ người dùng.</li>
+        <li>Áp dụng nguyên tắc đặc quyền tối thiểu cho tài khoản DB.</li>
+        <li>Dùng WAF như một lớp phòng thủ bổ sung.</li>
+      </ul>
+      <h2>3. Thực hành ở đâu?</h2>
+      <p>Bạn có thể luyện tập an toàn và hợp pháp trên: PortSwigger Web Security Academy, TryHackMe, DVWA.</p>
+      <p><em>⚠️ Chỉ thực hành trên môi trường lab được phép. Tấn công hệ thống thật khi chưa có sự cho phép là vi phạm pháp luật.</em></p>
+    </div>
+
+    <!-- ===== English ===== -->
+    <div class="lang-en">
+      <h1>SQL Injection Basics for Beginners</h1>
+      <p class="meta">2026-05-20 · Web Security · SQLi</p>
+      <p><strong>SQL Injection (SQLi)</strong> is a vulnerability that lets an attacker inject malicious SQL statements through application input, allowing unauthorized reading or modification of database data.</p>
+      <h2>1. The classic example</h2>
+      <p>Suppose the application builds a query via string concatenation:</p>
+      <pre>SELECT * FROM users
+WHERE username = '$user' AND password = '$pass';</pre>
+      <p>Entering <code>' OR '1'='1</code> in the password field makes the condition always true, letting an attacker log in without a valid password.</p>
+      <h2>2. Prevention</h2>
+      <ul>
+        <li>Use <strong>prepared statements / parameterized queries</strong>.</li>
+        <li>Validate and sanitize all user input.</li>
+        <li>Apply least privilege to database accounts.</li>
+        <li>Use a WAF as an additional defense layer.</li>
+      </ul>
+      <h2>3. Where to practice?</h2>
+      <p>Practice safely and legally on: PortSwigger Web Security Academy, TryHackMe, DVWA.</p>
+      <p><em>⚠️ Only practice in authorized lab environments. Attacking real systems without permission is illegal.</em></p>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <p><span class="mono">root@portfolio:~#</span></p>
+  </footer>
+
+  <script>
+    // Toggle ngôn ngữ & theme cho trang bài viết (độc lập, gọn nhẹ)
+    let lang = localStorage.getItem('lang') || 'vi';
+    function applyLang() {
+      document.body.classList.toggle('lang-en', lang === 'en');
+      document.getElementById('langToggle').textContent = lang === 'vi' ? 'EN' : 'VI';
+    }
+    function applyTheme(t) {
+      document.documentElement.dataset.theme = t;
+      localStorage.setItem('theme', t);
+      document.getElementById('themeToggle').textContent = t === 'dark' ? '☀' : '☾';
+    }
+    document.getElementById('langToggle').addEventListener('click', () => {
+      lang = lang === 'vi' ? 'en' : 'vi';
+      localStorage.setItem('lang', lang);
+      applyLang();
+    });
+    document.getElementById('themeToggle').addEventListener('click', () =>
+      applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
+    applyTheme(localStorage.getItem('theme') || 'dark');
+    applyLang();
+  </script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nguyen Truong Bao | Cybersecurity Student &amp; Future SOC Analyst</title>
+  <meta name="description" content="Portfolio of Nguyen Truong Bao - Information Security student at Duy Tan University, aspiring SOC Analyst. SIEM, security monitoring, network defense and security automation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-i18n="nav.about">Giới thiệu</a>
+      <a href="#skills" data-i18n="nav.skills">Kỹ năng</a>
+      <a href="#projects" data-i18n="nav.projects">Dự án</a>
+      <a href="#homelab" data-i18n="nav.lab">Home Lab</a>
+      <a href="#experience" data-i18n="nav.experience">Kinh nghiệm</a>
+      <a href="#blog" data-i18n="nav.blog">Blog</a>
+      <a href="#cv">CV</a>
+      <a href="#contact" data-i18n="nav.contact">Liên hệ</a>
+    </nav>
+
+    <a class="logo" href="#home" aria-label="Home">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 2 20 5 v6 c0 5.5-3.4 9.6-8 11 C7.4 20.6 4 16.5 4 11 V5 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 11.5 11 13.5 15.5 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>NTB</span>
+    </a>
+
+    <div class="nav-actions">
+      <a class="social" href="https://www.linkedin.com/in/nguyen-truong-bao-347437250" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.1h4.56V23H.22V8.1zM8.34 8.1h4.37v2.03h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 7v8.24h-4.55v-7.3c0-1.74-.03-3.99-2.43-3.99-2.44 0-2.81 1.9-2.81 3.86V23H8.34V8.1z"/></svg></a>
+      <a class="social" href="https://gitlab.com/bigzero3939-group" target="_blank" rel="noopener" aria-label="GitLab"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="currentColor" d="M12 21.4 8.7 11.3h6.6L12 21.4zm0 0L3.3 11.3h5.4L12 21.4zm-8.7-10 2-6.2c.1-.4.7-.4.8 0l1.6 4.9-4.4 1.3zm8.7 10 8.7-10.1h-5.4L12 21.4zm8.7-10.1-2-6.2c-.1-.4-.7-.4-.8 0l-1.6 4.9 4.4 1.3z"/></svg></a>
+      <a class="social" href="mailto:bigzero3939@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="17" height="17"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 5h18v14H3z"/><path fill="none" stroke="currentColor" stroke-width="2" d="m3 6 9 7 9-7"/></svg></a>
+      <span class="nav-sep"></span>
+      <button id="langToggle" class="btn-icon" title="Switch language">EN</button>
+      <button id="menuToggle" class="btn-icon menu-toggle" aria-label="Menu">≡</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+      <div class="hero-left reveal">
+        <p class="greeting">Nguyen Truong Bao · Da Nang, Vietnam</p>
+        <h1 data-i18n="hero.headline">Cybersecurity Student &amp; Future SOC Analyst</h1>
+        <p class="hero-role" data-i18n="hero.sub">Building practical skills in security monitoring, network defense, threat detection, and cybersecurity automation.</p>
+        <p class="hero-intro" data-i18n="hero.desc">I am an Information Security student with hands-on experience in SIEM deployment, security monitoring, network infrastructure, and web application security assessment.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_projects">View Projects</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="hero.cta_contact">Contact Me</a>
+          <a href="cv/NguyenTruongBao-CV.pdf" class="btn btn-outline" download="NguyenTruongBao-CV.pdf">⬇ Download CV</a>
+        </div>
+      </div>
+      <div class="hero-right reveal">
+        <svg class="soc-art" viewBox="0 0 420 300" role="img" aria-label="Security monitoring dashboard">
+          <rect x="20" y="14" width="380" height="240" rx="12" fill="#0c0c0c" stroke="#1f1f1f" stroke-width="1.5"/>
+          <rect x="20" y="14" width="380" height="34" rx="12" fill="#111111"/>
+          <rect x="20" y="34" width="380" height="14" fill="#111111"/>
+          <circle cx="42" cy="31" r="5" fill="#FF5C5C"/>
+          <circle cx="60" cy="31" r="5" fill="#2c2c2c"/>
+          <circle cx="78" cy="31" r="5" fill="#2c2c2c"/>
+          <polyline points="48,196 96,166 140,182 188,118 236,148 284,98 348,128" fill="none" stroke="#FF5C5C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="48" y1="212" x2="372" y2="212" stroke="#1d1d1d" stroke-width="1.5"/>
+          <rect x="48" y="224" width="70" height="7" rx="3.5" fill="#262626"/>
+          <rect x="128" y="224" width="46" height="7" rx="3.5" fill="#1c1c1c"/>
+          <rect x="184" y="224" width="58" height="7" rx="3.5" fill="#1c1c1c"/>
+          <g transform="translate(296,148)">
+            <path d="M38 0 L76 13 V42 C76 67 60 86 38 94 C16 86 0 67 0 42 V13 Z" fill="#0a0a0a" stroke="#FF5C5C" stroke-width="3"/>
+            <path d="M24 46 L34 57 L54 33" stroke="#FF5C5C" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <rect x="182" y="256" width="56" height="10" fill="#141414"/>
+          <rect x="150" y="268" width="120" height="8" rx="4" fill="#191919"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="about.title">Giới thiệu</span></h2>
+      <div class="about-grid">
+        <div>
+          <div class="lang-vi">
+            <p>Mình là <strong>Nguyễn Trường Bảo</strong>, sinh viên năm cuối ngành <strong>An toàn thông tin</strong> tại <strong>Đại học Duy Tân</strong> (tốt nghiệp dự kiến 2027), đến từ Đà Nẵng.</p>
+            <p>Mình thích tìm hiểu cách mạng máy tính hoạt động, cách các cuộc tấn công diễn ra và cách đội ngũ phòng thủ phát hiện, ứng phó với các mối đe dọa. Mục tiêu của mình là trở thành <strong>SOC Analyst / Cybersecurity Analyst</strong>, góp phần bảo vệ hệ thống doanh nghiệp qua giám sát, điều tra sự cố và tự động hóa bảo mật.</p>
+          </div>
+          <div class="lang-en">
+            <p>I'm <strong>Nguyen Truong Bao</strong>, a final-year <strong>Information Security</strong> student at <strong>Duy Tan University</strong> (expected graduation 2027), based in Da Nang, Vietnam.</p>
+            <p>I enjoy understanding how networks work, how attacks happen, and how defenders can detect and respond to threats. My goal is to become a <strong>SOC Analyst / Cybersecurity Analyst</strong> and contribute to protecting enterprise environments through monitoring, incident investigation, and security automation.</p>
+          </div>
+          <div class="chips interests-chips">
+            <span class="chip">SOC</span>
+            <span class="chip">Threat Detection</span>
+            <span class="chip">Security Monitoring</span>
+            <span class="chip">Network Security</span>
+            <span class="chip">Incident Response</span>
+            <span class="chip">Security Automation</span>
+            <span class="chip">Defensive Security</span>
+          </div>
+        </div>
+        <div class="card info-card">
+          <h3 data-i18n="about.edu_title">🎓 Học vấn</h3>
+          <p class="lang-vi">Cử nhân An toàn thông tin<br>Đại học Duy Tân — tốt nghiệp dự kiến 2027</p>
+          <p class="lang-en">B.Sc. in Information Security<br>Duy Tan University — expected graduation 2027</p>
+          <h3 data-i18n="about.goal_title">🎯 Mục tiêu</h3>
+          <p class="lang-vi">Trở thành SOC Analyst / Cybersecurity Analyst chuyên nghiệp.</p>
+          <p class="lang-en">Becoming a professional SOC Analyst / Cybersecurity Analyst.</p>
+          <h3 data-i18n="about.loc_title">📍 Địa điểm</h3>
+          <p>Da Nang, Vietnam</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="skills.title">Kỹ năng chuyên môn</span></h2>
+      <div class="grid" id="skillGrid"></div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="projects.title">Dự án nổi bật</span></h2>
+      <div class="grid projects-grid" id="projectGrid"></div>
+    </section>
+
+    <!-- ============ HOME LAB ============ -->
+    <section id="homelab" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="lab.title">Personal Cybersecurity Home Lab</span></h2>
+      <p class="section-desc lang-vi">Xây dựng và vận hành lab bảo mật ảo hóa bằng VMware Workstation để thực hành giám sát, phát hiện và ứng phó tấn công.</p>
+      <p class="section-desc lang-en">Built and maintained a virtual cybersecurity lab using VMware Workstation to practice monitoring, detection and incident response.</p>
+      <div class="lab-grid">
+        <div class="card">
+          <h3 data-i18n="lab.components">🧩 Thành phần</h3>
+          <div class="chips">
+            <span class="chip">pfSense Firewall</span>
+            <span class="chip">Wazuh SIEM</span>
+            <span class="chip">Suricata IDS/IPS</span>
+            <span class="chip">Ubuntu Server</span>
+            <span class="chip">Kali Linux</span>
+            <span class="chip">Windows Endpoints</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="lab.activities">⚙️ Hoạt động</h3>
+          <ul class="dash-list lang-vi">
+            <li>Phân đoạn mạng (network segmentation)</li>
+            <li>Giám sát an ninh &amp; phân tích log</li>
+            <li>Điều tra cảnh báo</li>
+            <li>Mô phỏng tấn công</li>
+            <li>Tinh chỉnh detection rule</li>
+            <li>Kiểm thử chính sách firewall</li>
+          </ul>
+          <ul class="dash-list lang-en">
+            <li>Network segmentation</li>
+            <li>Security monitoring &amp; log analysis</li>
+            <li>Alert investigation</li>
+            <li>Attack simulation</li>
+            <li>Detection rule tuning</li>
+            <li>Firewall policy testing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="experience.title">Kinh nghiệm</span></h2>
+      <div class="card xp-card">
+        <div class="xp-head">
+          <h3>Cybersecurity Research Intern</h3>
+          <span class="xp-company">FORE-Z</span>
+        </div>
+        <ul class="dash-list lang-vi">
+          <li>Review mã nguồn các plugin WordPress</li>
+          <li>Phát hiện lỗ hổng SQL Injection</li>
+          <li>Phát hiện lỗ hổng Cross-Site Scripting (XSS)</li>
+          <li>Đánh giá lỗ hổng (vulnerability assessment)</li>
+          <li>Kiểm thử bảo mật</li>
+          <li>Viết báo cáo kỹ thuật</li>
+        </ul>
+        <ul class="dash-list lang-en">
+          <li>Source code review of WordPress plugins</li>
+          <li>Identification of SQL Injection vulnerabilities</li>
+          <li>Identification of Cross-Site Scripting vulnerabilities</li>
+          <li>Vulnerability assessment</li>
+          <li>Security testing</li>
+          <li>Technical reporting</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section id="certificates" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="certs.title">Chứng chỉ</span></h2>
+      <div class="grid" id="certGrid"></div>
+    </section>
+
+    <!-- ============ LEARNING JOURNEY ============ -->
+    <section id="learning" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="learning.title">Hành trình học tập</span></h2>
+      <div class="card learning-card">
+        <div class="progress-row"><span>Cisco CCNA</span><span class="mono">70%</span></div>
+        <div class="skill-bar"><span style="width:70%"></span></div>
+        <div class="progress-row"><span>PortSwigger Web Security Academy</span><span class="mono">80%</span></div>
+        <div class="skill-bar"><span style="width:80%"></span></div>
+        <div class="progress-row"><span>Hack The Box — CJCA Path</span><span class="mono">60%</span></div>
+        <div class="skill-bar"><span style="width:60%"></span></div>
+      </div>
+    </section>
+
+    <!-- ============ LANGUAGES & INTERESTS ============ -->
+    <section id="languages" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="languages.title">Ngôn ngữ &amp; Sở thích</span></h2>
+      <div class="grid lang-cards">
+        <div class="card">
+          <h3>🇻🇳 Vietnamese</h3>
+          <p class="lang-vi">Bản ngữ</p>
+          <p class="lang-en">Native Proficiency</p>
+        </div>
+        <div class="card">
+          <h3>🇬🇧 English</h3>
+          <p class="lang-vi">Trung cấp (TOEIC mock: 665)</p>
+          <p class="lang-en">Intermediate Working Proficiency · TOEIC Mock: 665</p>
+          <ul class="dash-list lang-vi">
+            <li>Đọc hiểu và nghe tốt</li>
+            <li>Đọc tài liệu cybersecurity thoải mái</li>
+          </ul>
+          <ul class="dash-list lang-en">
+            <li>Strong reading &amp; listening comprehension</li>
+            <li>Comfortable reading cybersecurity documentation</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 data-i18n="interests.title">✨ Sở thích</h3>
+          <div class="chips lang-vi">
+            <span class="chip">An ninh mạng</span>
+            <span class="chip">Kỹ thuật mạng</span>
+            <span class="chip">Nghiên cứu bảo mật</span>
+            <span class="chip">Home Lab</span>
+            <span class="chip">Gym &amp; Tạ đơn</span>
+            <span class="chip">Công nghệ mới</span>
+          </div>
+          <div class="chips lang-en">
+            <span class="chip">Cybersecurity</span>
+            <span class="chip">Network Engineering</span>
+            <span class="chip">Security Research</span>
+            <span class="chip">Home Lab</span>
+            <span class="chip">Fitness &amp; Weight Training</span>
+            <span class="chip">Technology Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BLOG ============ -->
+    <section id="blog" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="blog.title">Blog</span></h2>
+      <div class="grid" id="blogGrid"></div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="cv" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span>CV / Resume</span></h2>
+      <p class="lang-vi">Nhà tuyển dụng có thể xem trực tiếp hoặc tải CV của mình bên dưới.</p>
+      <p class="lang-en">Recruiters can view my CV online or download it below.</p>
+      <div class="hero-cta" style="margin-bottom:18px;">
+        <a class="btn btn-primary" href="cv/NguyenTruongBao-CV.pdf" target="_blank" rel="noopener">👁 Xem CV / View CV</a>
+        <a class="btn btn-outline" href="cv/NguyenTruongBao-CV.pdf" download="NguyenTruongBao-CV.pdf">⬇ Tải CV / Download (PDF)</a>
+      </div>
+      <iframe src="cv/NguyenTruongBao-CV.pdf" title="CV - Nguyen Truong Bao" loading="lazy" style="width:100%;height:620px;border:1px solid #1f1f1f;border-radius:12px;background:#0c0c0c;"></iframe>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="contact.title">Liên hệ</span></h2>
+      <p data-i18n="contact.desc">Bạn muốn trao đổi về bảo mật, SOC hay cơ hội thực tập? Hãy liên hệ với mình!</p>
+      <p class="contact-loc">📍 Da Nang, Vietnam</p>
+      <div class="contact-links">
+        <a class="btn btn-outline" href="mailto:bigzero3939@gmail.com">📧 bigzero3939@gmail.com</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/nguyen-truong-bao-347437250" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="btn btn-outline" href="https://gitlab.com/bigzero3939-group" target="_blank" rel="noopener">🦊 GitLab</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="tagline" data-i18n="footer.tagline">"Continuous learning, practical experience, and a passion for cybersecurity."</p>
+    <p>© 2026 Nguyen Truong Bao</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
