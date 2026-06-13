@@ -48,15 +48,27 @@ Truy cập `https://<pages-domain>/admin.html` (không có link công khai trên
 
 ## 🚀 Deploy
 
-Mỗi khi push lên nhánh mặc định, job `pages` trong `.gitlab-ci.yml` sẽ tự động deploy thư mục `public/`.
+### GitHub Pages
 
-Trang web sẽ có địa chỉ dạng:
+Repository này đã có workflow GitHub Actions tại:
 
 ```
-https://bigzero3939-group.gitlab.io/my-porfolio/
+.github/workflows/deploy-pages.yml
 ```
 
-> 💡 Xem URL chính xác tại **Deploy → Pages** trong project.
+Workflow sẽ tự động deploy thư mục `bigseven3939-project-main/public/` lên GitHub Pages khi push vào nhánh `main`.
+
+URL site sau khi bật Pages:
+
+```
+https://zewolkt3939.github.io/BaoPorfolio/
+```
+
+> 💡 Vào **Settings → Pages** và chọn **Build and deployment: GitHub Actions** (chỉ cần làm 1 lần).
+
+### GitLab Pages (tuỳ chọn)
+
+Nếu dùng GitLab, job `pages` trong `.gitlab-ci.yml` vẫn deploy thư mục `public/` như trước.
 
 ## 🧪 Chạy thử local / Run locally
 
