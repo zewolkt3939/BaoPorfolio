@@ -1,4 +1,4 @@
-name: Deploy portfolio to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -28,10 +28,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload static site artifact
+      - name: Upload static artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./bigseven3939-project-main/public
+          path: bigseven3939-project-main/public
 
       - name: Deploy to GitHub Pages
         id: deployment
