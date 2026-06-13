@@ -50,7 +50,7 @@ Truy cập `https://<pages-domain>/admin.html` (không có link công khai trên
 
 Mỗi khi push lên nhánh `main`, workflow `.github/workflows/deploy-pages.yml` sẽ tự động deploy thư mục `bigseven3939-project-main/public/` lên GitHub Pages.
 
-Trang web sẽ có địa chỉ dạng:
+Repository này đã có workflow GitHub Actions tại:
 
 ```
 https://<username>.github.io/BaoPorfolio/
