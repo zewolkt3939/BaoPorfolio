@@ -1,8 +1,8 @@
 # 🛡️ Nguyễn Trường Bảo — Portfolio
 
-Trang web portfolio cá nhân song ngữ (🇻🇳 / 🇬🇧) về An toàn thông tin, được deploy bằng **GitLab Pages**.
+Trang web portfolio cá nhân song ngữ (🇻🇳 / 🇬🇧) về An toàn thông tin, được deploy bằng **GitHub Pages**.
 
-Bilingual personal cybersecurity portfolio website, deployed with **GitLab Pages**.
+Bilingual personal cybersecurity portfolio website, deployed with **GitHub Pages**.
 
 ## ✨ Tính năng / Features
 
@@ -48,15 +48,15 @@ Truy cập `https://<pages-domain>/admin.html` (không có link công khai trên
 
 ## 🚀 Deploy
 
-Mỗi khi push lên nhánh mặc định, job `pages` trong `.gitlab-ci.yml` sẽ tự động deploy thư mục `public/`.
+Mỗi khi push lên nhánh `main`, workflow `.github/workflows/deploy-pages.yml` sẽ tự động deploy thư mục `bigseven3939-project-main/public/` lên GitHub Pages.
 
 Trang web sẽ có địa chỉ dạng:
 
 ```
-https://bigzero3939-group.gitlab.io/my-porfolio/
+https://<username>.github.io/BaoPorfolio/
 ```
 
-> 💡 Xem URL chính xác tại **Deploy → Pages** trong project.
+> 💡 Xem URL chính xác tại **Settings → Pages** trong repository.
 
 ## 🧪 Chạy thử local / Run locally
 
