@@ -7,7 +7,9 @@
 let lang = localStorage.getItem('lang') || 'vi';
 
 function t(key) {
-  return key.split('.').reduce((o, k) => (o ? o[k] : undefined), I18N[lang]);
+  const fromCurrent = key.split('.').reduce((o, k) => (o ? o[k] : undefined), I18N[lang]);
+  if (fromCurrent !== undefined && fromCurrent !== null) return fromCurrent;
+  return key.split('.').reduce((o, k) => (o ? o[k] : undefined), I18N.vi);
 }
 
 function applyLang() {
@@ -29,13 +31,18 @@ function setLang(next) {
 }
 
 // ---------- Render helpers ----------
-const pick = (v) => (typeof v === 'object' ? v[lang] : v);
+const pick = (v) => {
+  if (v && typeof v === 'object') return v[lang] ?? v.vi ?? v.en ?? '';
+  return v ?? '';
+};
+const list = (v) => (Array.isArray(v) ? v : []);
 
 function renderCerts() {
   const grid = document.getElementById('certGrid');
   if (!grid) return;
-  grid.innerHTML = CERTIFICATES.map((c) => `
+  grid.innerHTML = list(CERTIFICATES).map((c) => `
     <div class="card">
+      ${c.image ? `<img class="card-image" src="${c.image}" alt="${c.name || 'Certificate image'}" loading="lazy" />` : ''}
       <span class="icon">${c.icon}</span>
       <h3>${c.name}</h3>
       <p class="meta">${c.issuer} · ${c.date}</p>
@@ -46,22 +53,23 @@ function renderCerts() {
 function renderSkills() {
   const grid = document.getElementById('skillGrid');
   if (!grid) return;
-  grid.innerHTML = SKILLS.map((g) => `
+  grid.innerHTML = list(SKILLS).map((g) => `
     <div class="card">
       <h3>${pick(g.group)}</h3>
-      <div class="chips">${g.items.map((s) => `<span class="chip">${typeof s === 'object' ? s.name : s}</span>`).join('')}</div>
+      <div class="chips">${list(g.items).map((s) => `<span class="chip">${typeof s === 'object' ? (s.name ?? '') : s}</span>`).join('')}</div>
     </div>`).join('');
 }
 
 function renderProjects() {
   const grid = document.getElementById('projectGrid');
   if (!grid) return;
-  grid.innerHTML = PROJECTS.map((p) => `
+  grid.innerHTML = list(PROJECTS).map((p) => `
     <div class="card">
+      ${p.image ? `<img class="card-image" src="${p.image}" alt="${pick(p.title) || 'Project image'}" loading="lazy" />` : ''}
       <h3>${pick(p.title)}</h3>
       <p>${pick(p.desc)}</p>
-      ${p.points ? `<ul class="dash-list">${p.points.map((pt) => `<li>${pick(pt)}</li>`).join('')}</ul>` : ''}
-      <div class="tags">${p.tags.map((tg) => `<span class="tag">${tg}</span>`).join('')}</div>
+      ${list(p.points).length ? `<ul class="dash-list">${list(p.points).map((pt) => `<li>${pick(pt)}</li>`).join('')}</ul>` : ''}
+      <div class="tags">${list(p.tags).map((tg) => `<span class="tag">${tg}</span>`).join('')}</div>
       ${p.link && p.link !== '#' ? `<a class="card-link" href="${p.link}" target="_blank" rel="noopener">${t('projects.view')}</a>` : ''}
     </div>`).join('');
 }
@@ -69,12 +77,13 @@ function renderProjects() {
 function renderBlog() {
   const grid = document.getElementById('blogGrid');
   if (!grid) return;
-  grid.innerHTML = BLOG_POSTS.map((b) => `
+  grid.innerHTML = list(BLOG_POSTS).map((b) => `
     <div class="card">
+      ${b.image ? `<img class="card-image" src="${b.image}" alt="${pick(b.title) || 'Blog image'}" loading="lazy" />` : ''}
       <h3>${pick(b.title)}</h3>
       <p class="meta">${b.date}</p>
       <p>${pick(b.excerpt)}</p>
-      <div class="tags">${b.tags.map((tg) => `<span class="tag">${tg}</span>`).join('')}</div>
+      <div class="tags">${list(b.tags).map((tg) => `<span class="tag">${tg}</span>`).join('')}</div>
       <a class="card-link" href="${b.url}">${t('blog.read')}</a>
     </div>`).join('');
 }
