@@ -15,10 +15,10 @@ const TOKEN_KEY = 'gl_admin_token';
 const clone = (o) => JSON.parse(JSON.stringify(o));
 
 const state = {
-  certificates: clone(CERTIFICATES),
-  skills: clone(SKILLS),
-  projects: clone(PROJECTS),
-  blog: clone(BLOG_POSTS),
+  certificates: Array.isArray(CERTIFICATES) ? clone(CERTIFICATES) : [],
+  skills: Array.isArray(SKILLS) ? clone(SKILLS) : [],
+  projects: Array.isArray(PROJECTS) ? clone(PROJECTS) : [],
+  blog: Array.isArray(BLOG_POSTS) ? clone(BLOG_POSTS) : [],
   dirty: false,
   section: 'certificates',
   editIndex: null
@@ -32,7 +32,8 @@ const SECTIONS = {
       { key: 'name', label: 'Tên chứng chỉ' },
       { key: 'issuer', label: 'Tổ chức cấp' },
       { key: 'date', label: 'Năm' },
-      { key: 'link', label: 'Link credential' }
+      { key: 'link', label: 'Link credential' },
+      { key: 'image', label: 'Ảnh (URL, tùy chọn)' }
     ],
     display: (it) => `${it.icon || ''} ${it.name || ''} — ${it.issuer || ''} (${it.date || ''})`
   },
@@ -42,7 +43,8 @@ const SECTIONS = {
       { key: 'title', label: 'Tiêu đề', bilingual: true },
       { key: 'desc', label: 'Mô tả', bilingual: true, textarea: true },
       { key: 'tags', label: 'Tags (phân cách bằng dấu phẩy)', list: true },
-      { key: 'link', label: 'Link' }
+      { key: 'link', label: 'Link' },
+      { key: 'image', label: 'Ảnh preview (URL, tùy chọn)' }
     ],
     display: (it) => (it.title && it.title.vi) || ''
   },
@@ -53,7 +55,8 @@ const SECTIONS = {
       { key: 'date', label: 'Ngày (YYYY-MM-DD)' },
       { key: 'tags', label: 'Tags (phân cách bằng dấu phẩy)', list: true },
       { key: 'excerpt', label: 'Tóm tắt', bilingual: true, textarea: true },
-      { key: 'url', label: 'URL bài viết (vd: blog/ten-bai.html)' }
+      { key: 'url', label: 'URL bài viết (vd: blog/ten-bai.html)' },
+      { key: 'image', label: 'Ảnh đại diện (URL, tùy chọn)' }
     ],
     display: (it) => `${(it.title && it.title.vi) || ''} (${it.date || ''})`
   },
@@ -203,7 +206,7 @@ function buildForm(cfg, items) {
 }
 
 function renderJsonEditor(box) {
-  box.appendChild(el('<p class="hint">Chỉnh trực tiếp JSON cho phần kỹ năng: mỗi nhóm có <code>group</code> (song ngữ vi/en) và <code>items</code> (name + level 0-100).</p>'));
+  box.appendChild(el('<p class="hint">Chỉnh trực tiếp JSON cho phần kỹ năng: mỗi nhóm có <code>group</code> (song ngữ vi/en) và <code>items</code>.</p>'));
   const ta = el('<textarea class="json-editor" rows="18"></textarea>');
   ta.value = JSON.stringify(state.skills, null, 2);
   box.appendChild(ta);

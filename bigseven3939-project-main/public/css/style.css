@@ -154,6 +154,15 @@ body.lang-en div.chips.lang-vi { display: none; }
 .card:hover { transform: translateY(-4px); border-color: var(--accent); }
 .card h3 { font-size: 18px; font-weight: 600; margin-bottom: 12px; }
 .card .icon { font-size: 30px; display: block; margin-bottom: 14px; }
+.card .card-image {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 14px;
+}
 .card p { color: var(--muted); font-size: 15px; }
 .card .meta { color: var(--accent); font-size: 13.5px; font-weight: 500; margin-bottom: 10px; }
 .info-card h3 { margin-top: 18px; }
