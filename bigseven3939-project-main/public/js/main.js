@@ -14,7 +14,7 @@ function t(key) {
 
 function applyLang() {
   document.documentElement.lang = lang;
-  document.body.classList.toggle('lang-en', lang === 'en');
+  document.body.classList.toggle('is-en', lang === 'en');
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const value = t(el.dataset.i18n);
     if (value) el.textContent = value;
