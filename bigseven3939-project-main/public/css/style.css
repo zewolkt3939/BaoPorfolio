@@ -35,11 +35,11 @@ button { font: inherit; }
 
 /* ---------- Language toggle ---------- */
 .lang-en { display: none; }
-body.lang-en .lang-en { display: block; }
-body.lang-en .lang-vi { display: none; }
+body.is-en .lang-en { display: block; }
+body.is-en .lang-vi { display: none; }
 div.chips.lang-en { display: none; }
-body.lang-en div.chips.lang-en { display: flex; }
-body.lang-en div.chips.lang-vi { display: none; }
+body.is-en div.chips.lang-en { display: flex; }
+body.is-en div.chips.lang-vi { display: none; }
 
 /* ---------- Navbar ---------- */
 .navbar {
