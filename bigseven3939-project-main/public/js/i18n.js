@@ -7,7 +7,7 @@ const I18N = {
   vi: {
     nav: { about: 'Giới thiệu', skills: 'Kỹ năng', projects: 'Dự án', lab: 'Home Lab', experience: 'Kinh nghiệm', blog: 'Blog', contact: 'Liên hệ' },
     hero: {
-      headline: 'Sinh viên An toàn thông tin & SOC Analyst tương lai',
+      headline: 'Sinh viên An toàn thông tin & SOC Analyst',
       sub: 'Xây dựng kỹ năng thực chiến về giám sát an ninh, phòng thủ mạng, phát hiện mối đe dọa và tự động hóa bảo mật.',
       desc: 'Mình là sinh viên ngành An toàn thông tin với kinh nghiệm thực hành về triển khai SIEM, giám sát an ninh, hạ tầng mạng và đánh giá bảo mật ứng dụng web. Hành trình học tập của mình kết hợp kiến thức học thuật, home lab, chứng chỉ và phát triển dự án thực tế.',
       cta_projects: 'Xem dự án',
