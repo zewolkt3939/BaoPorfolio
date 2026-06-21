@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nguyen Truong Bao | Cybersecurity Student &amp; SOC Analyst</title>
-  <meta name="description" content="Portfolio of Nguyen Truong Bao - Information Security student at Duy Tan University, aspiring SOC Analyst. SIEM, security monitoring, network defense and security automation." />
+  <title>Nguyen Truong Bao | SOC Analyst Portfolio</title>
+  <meta name="description" content="SOC Analyst portfolio of Nguyen Truong Bao featuring SIEM monitoring, detection engineering, incident triage workflow, and cybersecurity projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nguyen Truong Bao | SOC Analyst Portfolio" />
+  <meta property="og:description" content="Hands-on SOC Analyst portfolio: Wazuh SIEM, threat detection, incident response workflow, and security projects." />
+  <meta property="og:image" content="assets/og-cover.svg" />
+  <meta property="og:url" content="https://bigseven3939.github.io/BaoPorfolio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nguyen Truong Bao | SOC Analyst Portfolio" />
+  <meta name="twitter:description" content="Hands-on SOC Analyst portfolio with practical projects and detection mindset." />
+  <meta name="twitter:image" content="assets/og-cover.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
@@ -18,6 +28,7 @@
       <a href="#projects" data-i18n="nav.projects">Dự án</a>
       <a href="#homelab" data-i18n="nav.lab">Home Lab</a>
       <a href="#experience" data-i18n="nav.experience">Kinh nghiệm</a>
+      <a href="#mindset" data-i18n="nav.mindset">Detection Mindset</a>
       <a href="#blog" data-i18n="nav.blog">Blog</a>
       <a href="#cv">CV</a>
       <a href="#contact" data-i18n="nav.contact">Liên hệ</a>
@@ -47,6 +58,23 @@
         <h1 data-i18n="hero.headline">Cybersecurity Student &amp; SOC Analyst</h1>
         <p class="hero-role" data-i18n="hero.sub">Building practical skills in security monitoring, network defense, threat detection, and cybersecurity automation.</p>
         <p class="hero-intro" data-i18n="hero.desc">I am an Information Security student with hands-on experience in SIEM deployment, security monitoring, network infrastructure, and web application security assessment.</p>
+        <div class="hero-metrics">
+          <div class="metric-card">
+            <strong>6+</strong>
+            <span class="lang-vi">Lab bảo mật đã dựng</span>
+            <span class="lang-en">Security lab scenarios built</span>
+          </div>
+          <div class="metric-card">
+            <strong>12+</strong>
+            <span class="lang-vi">Rule/phát hiện đã tinh chỉnh</span>
+            <span class="lang-en">Detection rules tuned</span>
+          </div>
+          <div class="metric-card">
+            <strong>10+</strong>
+            <span class="lang-vi">Báo cáo kỹ thuật &amp; write-up</span>
+            <span class="lang-en">Technical reports &amp; write-ups</span>
+          </div>
+        </div>
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_projects">View Projects</a>
           <a href="#contact" class="btn btn-outline" data-i18n="hero.cta_contact">Contact Me</a>
@@ -82,12 +110,18 @@
       <div class="about-grid">
         <div>
           <div class="lang-vi">
-            <p>Mình là <strong>Nguyễn Trường Bảo</strong>, sinh viên năm cuối ngành <strong>An toàn thông tin</strong> tại <strong>Đại học Duy Tân</strong> (tốt nghiệp dự kiến 2027), đến từ Đà Nẵng.</p>
-            <p>Mình thích tìm hiểu cách mạng máy tính hoạt động, cách các cuộc tấn công diễn ra và cách đội ngũ phòng thủ phát hiện, ứng phó với các mối đe dọa. Mục tiêu của mình là trở thành <strong>SOC Analyst / Cybersecurity Analyst</strong>, góp phần bảo vệ hệ thống doanh nghiệp qua giám sát, điều tra sự cố và tự động hóa bảo mật.</p>
+            <ul class="dash-list compact-list">
+              <li>Sinh viên năm cuối ngành <strong>An toàn thông tin</strong> tại <strong>Đại học Duy Tân</strong> (tốt nghiệp dự kiến 2027)</li>
+              <li>Tập trung vào giám sát an ninh, điều tra cảnh báo và phòng thủ mạng</li>
+              <li>Mục tiêu nghề nghiệp: <strong>SOC Analyst / Cybersecurity Analyst</strong></li>
+            </ul>
           </div>
           <div class="lang-en">
-            <p>I'm <strong>Nguyen Truong Bao</strong>, a final-year <strong>Information Security</strong> student at <strong>Duy Tan University</strong> (expected graduation 2027), based in Da Nang, Vietnam.</p>
-            <p>I enjoy understanding how networks work, how attacks happen, and how defenders can detect and respond to threats. My goal is to become a <strong>SOC Analyst / Cybersecurity Analyst</strong> and contribute to protecting enterprise environments through monitoring, incident investigation, and security automation.</p>
+            <ul class="dash-list compact-list">
+              <li>Final-year <strong>Information Security</strong> student at <strong>Duy Tan University</strong> (expected graduation 2027)</li>
+              <li>Focused on security monitoring, alert investigation, and network defense</li>
+              <li>Career target: <strong>SOC Analyst / Cybersecurity Analyst</strong></li>
+            </ul>
           </div>
           <div class="chips interests-chips">
             <span class="chip">SOC</span>
@@ -166,6 +200,24 @@
     <!-- ============ EXPERIENCE ============ -->
     <section id="experience" class="section reveal">
       <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="experience.title">Kinh nghiệm</span></h2>
+      <div class="timeline card">
+        <div class="timeline-item">
+          <span class="timeline-date">2026</span>
+          <div>
+            <h3>Cybersecurity Research Intern · FORE-Z</h3>
+            <p class="lang-vi">Thực hiện code review plugin WordPress, phát hiện SQLi/XSS và viết báo cáo kỹ thuật.</p>
+            <p class="lang-en">Reviewed WordPress plugin code, identified SQLi/XSS issues, and produced technical reports.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">2025 - 2026</span>
+          <div>
+            <h3>Personal SOC Lab Builder</h3>
+            <p class="lang-vi">Thiết kế môi trường Wazuh + Suricata + pfSense để mô phỏng kịch bản giám sát và xử lý sự cố.</p>
+            <p class="lang-en">Built Wazuh + Suricata + pfSense lab to simulate monitoring and incident triage workflows.</p>
+          </div>
+        </div>
+      </div>
       <div class="card xp-card">
         <div class="xp-head">
           <h3>Cybersecurity Research Intern</h3>
@@ -187,6 +239,34 @@
           <li>Security testing</li>
           <li>Technical reporting</li>
         </ul>
+      </div>
+    </section>
+
+    <section id="mindset" class="section reveal">
+      <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="mindset.title">Detection Mindset</span></h2>
+      <p class="section-desc lang-vi">Mình ưu tiên giảm nhiễu, tăng độ chính xác cảnh báo và phản hồi có ngữ cảnh cho đội vận hành.</p>
+      <p class="section-desc lang-en">I prioritize noise reduction, higher alert precision, and context-rich response for operations teams.</p>
+      <div class="grid">
+        <div class="card">
+          <h3 data-i18n="mindset.principles">Nguyên tắc làm việc</h3>
+          <ul class="dash-list">
+            <li class="lang-vi">Ưu tiên cảnh báo theo tác động hệ thống</li>
+            <li class="lang-en">Prioritize alerts by business/system impact</li>
+            <li class="lang-vi">Luôn đối chiếu nhiều nguồn log trước khi kết luận</li>
+            <li class="lang-en">Correlate multiple log sources before concluding</li>
+            <li class="lang-vi">Tự động hóa tác vụ lặp lại để rút ngắn MTTD</li>
+            <li class="lang-en">Automate repetitive triage tasks to reduce MTTD</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 data-i18n="mindset.workflow">Mini Incident Workflow</h3>
+          <ol class="incident-flow">
+            <li><span>1</span><p class="lang-vi">Phát hiện cảnh báo từ SIEM/IDS</p><p class="lang-en">Detect alert from SIEM/IDS</p></li>
+            <li><span>2</span><p class="lang-vi">Triage theo mức độ nghiêm trọng và tài sản bị ảnh hưởng</p><p class="lang-en">Triage by severity and impacted asset</p></li>
+            <li><span>3</span><p class="lang-vi">Điều tra IOC, timeline và hành vi bất thường</p><p class="lang-en">Investigate IOC, timeline, and anomalous behavior</p></li>
+            <li><span>4</span><p class="lang-vi">Khuyến nghị containment + bài học cải tiến rule</p><p class="lang-en">Recommend containment and detection-rule improvement</p></li>
+          </ol>
+        </div>
       </div>
     </section>
 
@@ -274,6 +354,8 @@
     <section id="contact" class="section reveal">
       <h2 class="section-title"><span class="prompt">//</span> <span data-i18n="contact.title">Liên hệ</span></h2>
       <p data-i18n="contact.desc">Bạn muốn trao đổi về bảo mật, SOC hay cơ hội thực tập? Hãy liên hệ với mình!</p>
+      <p class="open-role lang-vi">✅ Open to Internship / Junior SOC Analyst opportunities</p>
+      <p class="open-role lang-en">✅ Open to Internship / Junior SOC Analyst opportunities</p>
       <p class="contact-loc">📍 Da Nang, Vietnam</p>
       <div class="contact-links">
         <a class="btn btn-outline" href="mailto:bigzero3939@gmail.com">📧 bigzero3939@gmail.com</a>
@@ -287,6 +369,11 @@
     <p class="tagline" data-i18n="footer.tagline">"Continuous learning, practical experience, and a passion for cybersecurity."</p>
     <p>© 2026 Nguyen Truong Bao</p>
   </footer>
+
+  <div class="sticky-cta">
+    <a class="btn btn-primary" href="cv/NguyenTruongBao-CV.pdf" download="NguyenTruongBao-CV.pdf">⬇ Download CV</a>
+    <a class="btn btn-outline" href="mailto:bigzero3939@gmail.com">📅 Book a call / Email</a>
+  </div>
 
   <script src="js/i18n.js"></script>
   <script src="js/data.js"></script>

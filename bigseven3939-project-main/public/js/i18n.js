@@ -5,7 +5,7 @@
 // =====================================================
 const I18N = {
   vi: {
-    nav: { about: 'Giới thiệu', skills: 'Kỹ năng', projects: 'Dự án', lab: 'Home Lab', experience: 'Kinh nghiệm', blog: 'Blog', contact: 'Liên hệ' },
+    nav: { about: 'Giới thiệu', skills: 'Kỹ năng', projects: 'Dự án', lab: 'Home Lab', experience: 'Kinh nghiệm', mindset: 'Detection Mindset', blog: 'Blog', contact: 'Liên hệ' },
     hero: {
       headline: 'Sinh viên An toàn thông tin & SOC Analyst',
       sub: 'Xây dựng kỹ năng thực chiến về giám sát an ninh, phòng thủ mạng, phát hiện mối đe dọa và tự động hóa bảo mật.',
@@ -15,9 +15,10 @@ const I18N = {
     },
     about: { title: 'Giới thiệu', edu_title: '🎓 Học vấn', goal_title: '🎯 Mục tiêu', loc_title: '📍 Địa điểm' },
     skills: { title: 'Kỹ năng chuyên môn' },
-    projects: { title: 'Dự án nổi bật', view: 'Xem chi tiết →' },
+    projects: { title: 'Dự án nổi bật', view: 'Xem chi tiết →', context: 'Bối cảnh', role: 'Vai trò', outcome: 'Kết quả' },
     lab: { title: 'Personal Cybersecurity Home Lab', components: '🧩 Thành phần', activities: '⚙️ Hoạt động' },
     experience: { title: 'Kinh nghiệm' },
+    mindset: { title: 'Detection Mindset', principles: 'Nguyên tắc làm việc', workflow: 'Mini Incident Workflow' },
     certs: { title: 'Chứng chỉ', view: 'Xem chứng chỉ →' },
     learning: { title: 'Hành trình học tập' },
     languages: { title: 'Ngôn ngữ & Sở thích' },
@@ -27,7 +28,7 @@ const I18N = {
     footer: { tagline: '“Học hỏi không ngừng, kinh nghiệm thực chiến và đam mê an toàn thông tin.”' }
   },
   en: {
-    nav: { about: 'About Me', skills: 'Skills', projects: 'Projects', lab: 'Home Lab', experience: 'Experience', blog: 'Blog', contact: 'Contact' },
+    nav: { about: 'About Me', skills: 'Skills', projects: 'Projects', lab: 'Home Lab', experience: 'Experience', mindset: 'Detection Mindset', blog: 'Blog', contact: 'Contact' },
     hero: {
       headline: 'Cybersecurity Student & Future SOC Analyst',
       sub: 'Building practical skills in security monitoring, network defense, threat detection, and cybersecurity automation.',
@@ -37,9 +38,10 @@ const I18N = {
     },
     about: { title: 'About Me', edu_title: '🎓 Education', goal_title: '🎯 Goal', loc_title: '📍 Location' },
     skills: { title: 'Technical Skills' },
-    projects: { title: 'Featured Projects', view: 'View details →' },
+    projects: { title: 'Featured Projects', view: 'View details →', context: 'Context', role: 'Role', outcome: 'Outcome' },
     lab: { title: 'Personal Cybersecurity Home Lab', components: '🧩 Lab Components', activities: '⚙️ Lab Activities' },
     experience: { title: 'Experience' },
+    mindset: { title: 'Detection Mindset', principles: 'Working Principles', workflow: 'Mini Incident Workflow' },
     certs: { title: 'Certifications', view: 'View credential →' },
     learning: { title: 'Learning Journey' },
     languages: { title: 'Languages & Interests' },

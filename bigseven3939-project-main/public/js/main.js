@@ -45,8 +45,9 @@ function renderCerts() {
       ${c.image ? `<img class="card-image" src="${c.image}" alt="${c.name || 'Certificate image'}" loading="lazy" />` : ''}
       <span class="icon">${c.icon}</span>
       <h3>${c.name}</h3>
-      <p class="meta">${c.issuer} · ${c.date}</p>
-      <a class="card-link" href="${c.link}" target="_blank" rel="noopener">${t('certs.view')}</a>
+      <p class="meta">${c.issuer} · ${c.date || ''}</p>
+      ${c.status ? `<p class="cert-status">${pick(c.status)}</p>` : ''}
+      ${c.link && c.link !== '#' ? `<a class="card-link" href="${c.link}" target="_blank" rel="noopener">${t('certs.view')}</a>` : ''}
     </div>`).join('');
 }
 
@@ -68,9 +69,15 @@ function renderProjects() {
       ${p.image ? `<img class="card-image" src="${p.image}" alt="${pick(p.title) || 'Project image'}" loading="lazy" />` : ''}
       <h3>${pick(p.title)}</h3>
       <p>${pick(p.desc)}</p>
+      ${p.context ? `<p class="project-meta"><strong>${t('projects.context')}:</strong> ${pick(p.context)}</p>` : ''}
+      ${p.role ? `<p class="project-meta"><strong>${t('projects.role')}:</strong> ${pick(p.role)}</p>` : ''}
       ${list(p.points).length ? `<ul class="dash-list">${list(p.points).map((pt) => `<li>${pick(pt)}</li>`).join('')}</ul>` : ''}
+      ${p.outcome ? `<p class="project-meta"><strong>${t('projects.outcome')}:</strong> ${pick(p.outcome)}</p>` : ''}
       <div class="tags">${list(p.tags).map((tg) => `<span class="tag">${tg}</span>`).join('')}</div>
-      ${p.link && p.link !== '#' ? `<a class="card-link" href="${p.link}" target="_blank" rel="noopener">${t('projects.view')}</a>` : ''}
+      <div class="project-links">
+        ${list(p.links).map((lnk) => `<a class="card-link" href="${lnk.url}" ${lnk.url.startsWith('http') ? 'target="_blank" rel="noopener"' : ''}>${pick(lnk.label)} →</a>`).join('')}
+        ${p.link && p.link !== '#' ? `<a class="card-link" href="${p.link}" target="_blank" rel="noopener">${t('projects.view')}</a>` : ''}
+      </div>
     </div>`).join('');
 }
 
